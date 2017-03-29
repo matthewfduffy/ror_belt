@@ -1,0 +1,39 @@
+
+<%= link_to 'Go to Dashboard', users_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h4 style="text-align:center">All Products</h4><hr />
+
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Seller</th>
+              <th>Date Posted</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @products.each do |product| %>
+              <tr>
+                <td><%= product.name %></td>
+                <td><%= product.seller %></td>
+                <td><%= product.created_at.strftime("%A %B %d, %Y")  %></td>
+                <td><%= number_to_currency(product.amount) %></td>
+                <td>
+                  <form action="/buy" method="post">
+                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                    <input type="hidden" name="product_id" value="<%= product.id %>">
+                    <input type="submit" value="Buy">
+                  </form>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
