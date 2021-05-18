@@ -1,26 +1,6 @@
-# README
+# DEPRECATED
+#### Last Active: May 2017
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was a portfolio project created while studying web-development at Coding Dojo. <br>
+The application and any dependencies are no longer maintained.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# ruby_belt_3
-# ror_belt
